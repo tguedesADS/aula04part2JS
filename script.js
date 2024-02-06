@@ -67,14 +67,22 @@
 //FAÇA UM PROGRAMA QUE PEDE PARA O USUÁRIO DIGITAR UM NÚMERO POSITIVO E FAÇA A MÁQUINA ESCOLHER UM NÚMERO ALEATÓRIO ENTRE 1 E 100
 // E MOSTRE UMA MENSAGEM NO CONSOLE MOSTRANDO SE O VALOR DIGITADO PELO USUÁRIO É MAIOR OU MENOR DO QUE O NÚMERO ALEATÓRIO ESCOLHIDO 
 // PELA MÁQUINA E CASO ELE ACERTE, MOSTRE UMA MENSAGEM INFORMANDO QUE ELE ACERTOU
-let numero_digitado = Number(prompt("Escolha um número de 1 a 100: "))
-const numero_aleatorio = Math.floor(Math.random () * 100) +1
+const numero_aleatorio = Math.floor(Math.random() * 100) + 1;
 
-if(numero_digitado > numero_aleatorio){
-  console.log(`O número digitado foi ${numero_digitado}, ele é maior do que o número sorteado`)
-} else if(numero_digitado < numero_aleatorio){
-  console.log(`O número digitado foi ${numero_digitado}, ele é menor do que o número sorteado`)
-}else if(numero_digitado === numero_aleatorio){
-  console.log(`Você acertou o número!!!`)
+while(true) {
+  let numero_digitado = Number(prompt("Escolha um número de 1 a 100: "));
+
+  if (numero_digitado > numero_aleatorio) {
+    alert(
+      `O número digitado foi ${numero_digitado}, ele é maior do que o número sorteado`
+    );
+  } else if (numero_digitado < numero_aleatorio) {
+    alert(
+      `O número digitado foi ${numero_digitado}, ele é menor do que o número sorteado`
+    );
+  } else {
+    alert(`Você acertou o número!!!`);
+    break;
+  }
 }
-console.log(numero_aleatorio)
+
